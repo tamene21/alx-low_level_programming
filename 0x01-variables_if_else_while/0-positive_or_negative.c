@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - assigns n a random number to int 
- * Return: Always 0 (Success)
+ *main-assigns n random number to int
+ *Return: Always 0 (Success)
  */
 int main(void)
 {

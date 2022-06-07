@@ -1,4 +1,5 @@
 #include<stdio>
+#include<main.h>
 /**
  *main - prints _putchart, followed by a new line
  * Return: Always 0 (success)

@@ -1,8 +1,10 @@
 #include<stdio.h>
 #include "main.h"
+
 /**
  * mul - multiplies 2 intigers
- * @a && @b: to be multiplied eachother
+ * @a: intiger a
+ * @b: intiger b
  * Return: 1 for success, 0 otherwise
  */
 

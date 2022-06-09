@@ -1,3 +1,4 @@
+#include<stdio.h>
 #include "main.h"
 
 /**
@@ -5,11 +6,8 @@
  *@c: to be tested character
  * Return: 1 if it is upper case, 0 otherwise
  */
-int _isupper(c)
-{
 
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else
-		return (0);
+int _isupper(int c)
+{
+	return (c >= 'A' && c <= 'Z');
 }

@@ -3,8 +3,9 @@
 /**
  *_strcat - concatinating char *dest, char *src
  *
- *@dest- Destination
- *@src- source
+ *@dest:This is the output dataset
+ *@src:This is the source dataset
+ *
  *Return: dest file
  */
 

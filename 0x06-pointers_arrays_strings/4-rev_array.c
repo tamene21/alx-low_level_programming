@@ -11,11 +11,13 @@ void reverse_array(int *a, int n)
 
 	int low, high, temp;
 
-	for (low = 0, high = n - 1; low < high; low++, high--)
+	high = n - 1;
+
+	for (low = 0, low < n / 2; low++)
 	{
-		temp = arr[low];
-		arr[low] = arr[high];
-		arr[high] = temp;
+		temp = a[low];
+		a[low] = a[high];
+		a[high] = temp;
 	}
 
 

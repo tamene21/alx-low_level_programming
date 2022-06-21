@@ -5,22 +5,25 @@
  * @accept: string to match
  * Return: pointer to thebyte in s that matches one of the bytes in accept
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j;
+	int x, y;
+	char *z;
 
-	for (i = 0; *s != '\0'; i++)
+	x = 0;
+	while (s[x] != '\0')
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		y = 0;
+		while (accept[y] != '\0')
 		{
-			if (*s == accept[j])
+			if (accept[y] == s[x])
 			{
-				return (s);
+				z = &s[x];
+				return (z);
 			}
+			y++;
 		}
-		s++;
+		x++;
 	}
-
-	return (NULL);
+	return (0);
 }

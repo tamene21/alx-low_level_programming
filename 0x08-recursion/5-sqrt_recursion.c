@@ -21,8 +21,8 @@ int _squaroot(int x, int i)
 	if (i * i > x)
 		return (-1);
 	if (i * i == x)
-		return (i)
-			return (_squaroot(x, i + 1));
+		return (i);
+	return (_squaroot(x, i + 1));
 }
 
 

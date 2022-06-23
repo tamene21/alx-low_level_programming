@@ -8,7 +8,7 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (_squaroot(n, 0));
+	return (new_squaroot(n, 0));
 }
 /**
  *_squaroot  - function to solve sqrt_recursion
@@ -16,13 +16,13 @@ int _sqrt_recursion(int n)
  * @i: Incrementer to compare against c
  * Return: square root if natural or -1 i none found
  */
-int _squaroot(int x, int i)
+int new_squaroot(int x, int i)
 {
 	if (i * i > x)
 		return (-1);
 	if (i * i == x)
 		return (i);
-	return (_squaroot(x, i + 1));
+	return (new_squaroot(x, i + 1));
 }
 
 

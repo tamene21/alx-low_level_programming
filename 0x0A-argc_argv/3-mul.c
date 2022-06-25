@@ -8,8 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int mult;
 	int x, y;
+	(void) argc;
 
 	if (argv[1] && argv[2])
 	{

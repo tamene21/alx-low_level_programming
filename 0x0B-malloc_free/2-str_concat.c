@@ -30,9 +30,12 @@ char *str_concat(char *s1, char *s2)
 
 	for (a = 0; a < i; a++)
 		s[a] = s1[a];
+		a++;
 
 	for (b = 0; b < sum; b++)
-		s[i + 1] = s2[c];
+		s[i] = s2[b];
+		b++;
+		s[sum] = '\0';
 
 	return (s);
 

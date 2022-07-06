@@ -5,7 +5,7 @@
  * print_name - print name as is
  * @name: name of the person
  * @f: a pointer to a print function
- * Return: Nothing
+ * Return: void
  */
 
 void print_name(char name, void (*f)(char *))

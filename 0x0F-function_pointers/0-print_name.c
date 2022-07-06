@@ -1,6 +1,6 @@
 #include "function_pointers.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * print_name - print name as is
  * @name: name of the person

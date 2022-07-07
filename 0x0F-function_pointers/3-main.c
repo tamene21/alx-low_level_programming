@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "3-calc.h"
 
 /**
@@ -53,5 +51,6 @@ int main(int argc, char *argv[])
 	ans = res(one, two);
 
 	print("%d\n", ans);
+
 	return (0);
 }

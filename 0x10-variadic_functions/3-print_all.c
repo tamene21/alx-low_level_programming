@@ -1,21 +1,46 @@
 #include "variadic_functions.h"
-#include<strings.h>
-#include<stdarg.h>
-#include<stdio.h>
-
 /**
- * print_all - print all data types
- * @format: data types or farms
- * Return: Nothing 
+ *print_all - prints anything
+ *@format: list of types of arguments passed to the function
  */
 
 void print_all(const char * const format, ...)
 {
-va_list all_type;
+	int i = 0;
+	char *str, *sep = "";
+	va_list list;
 
+	va_start(list, format);
 
-
-printf("\n");
-
-va_end(all_type);
+	if (format)
+	{
+		while (format[i])
+		{
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
+		}
+	}
+	printf("\n");
+	va_end(list);
 }

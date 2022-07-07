@@ -1,6 +1,6 @@
-#include "vardiac_function.h"
 #include<stdarg.h>
 #include<stdio.h>
+#include "variadic_functions.h"
 
 /**
  * sum_them_all - suming the number of argumnets

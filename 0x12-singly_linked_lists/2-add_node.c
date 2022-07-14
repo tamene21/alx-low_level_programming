@@ -19,31 +19,27 @@ int _strlen(const char *str)
 
 }
 
-
 /**
  *add_node - a function to add a node at the bigging
  *@head: a pointer to a pointer
  *@str: a pointer to a new entray
  *Return: the address of the new element
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
 
-	list_t *new_node;
+	list_t *temp;
 
-	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
 		return (NULL);
 
 
-	new_node->next = *head;
-	new_node->str = strdup(str);
-	new_node->len = _strlen(str);
+	temp->next = *head;
+	temp->str = strdup(str);
+	temp->len = _strlen(str);
 
-	*head = new_node;
+	*head = temp;
 
 	return (*head);
-
-
 }

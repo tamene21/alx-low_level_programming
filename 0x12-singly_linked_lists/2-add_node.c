@@ -1,6 +1,6 @@
 #include "lists.h"
 #include<stdlib.h>
-#include<stdio.h>
+#include<string.h>
 
 /**
  *add_node - a function to add a node at the bigging

@@ -5,11 +5,15 @@
  * @head: pointer to head of list
  * Return: number of nodes printed
  */
-size_t print_listint_safe(const listint_t *head)
+
+ize_t print_listint_safe(const listint_t *head)
 {
 	int diff;
 
 	register short count = 0;
+
+	if (!listint_t)
+		exit(98);
 
 	while (head)
 	{

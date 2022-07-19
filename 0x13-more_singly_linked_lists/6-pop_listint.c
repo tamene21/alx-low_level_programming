@@ -3,16 +3,21 @@
 /**
  *pop_listint - a function to pop a list
  *@head:a pointer to a list pointer
- *Return: another list
+ *Return: deleted list and 0 if list is empty
  */
 
 int pop_listint(listint_t **head)
 {
 	listint_t *temp;
-	*temp = *head;
+	int pop;
 
-	if (temp)
-		*head = temp->next;
+	if (!head || !*head)
+		return (0);
 
-	return (temp);
+	pop = (*head)->n;
+	temp = (*head)->next;
+	free(*head);
+	*head = temp;
+
+	return (pop);
 }

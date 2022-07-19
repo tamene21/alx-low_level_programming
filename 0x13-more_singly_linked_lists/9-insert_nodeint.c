@@ -1,45 +1,41 @@
 #include "lists.h"
-#include<stdlib.h>
 
 /**
- *insert_nodeint_at_index - a function to insert at a given node
- *@head: a point to the list
- *@idx: index to be inserted at (position)
- *@n: data on the new node
- *Return: the address of the new node
+ * insert_nodeint_at_index - inserts a new node at a given position
+ * @head: double pointer to head of list
+ * @idx: index to add new node
+ * @n: value at new node
+ * Return: address of new node, or NULL if failed
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *current;
-	listint_t *temp;
-	int i;
+	listint_t *newNode;
 
-	temp = malloc(sizeof(listint_t));
-	if (!head || !temp)
+	register uint i;
+
+	newNode = malloc(sizeof(listint_t));
+	if (!head || !newNode)
 		return (NULL);
-	temp->n = n;
+	newNode->n = n;
 	if (!idx)
 	{
-		temp->next = *head;
-		*head = temp;
-		return (temp);
-
+		newNode->next = *head;
+		*head = newNode;
+		return (newNode);
 	}
 	current = *head;
-
 	while (current)
 	{
 		if (i == idx - 1)
 		{
-			temp->next = current->next;
-			current->next = temp;
-			return (temp);
+			newNode->next = current->next;
+			current->next = newNode;
+			return (newNode);
 		}
 		i++;
 		current = current->next;
 	}
-	free(temp);
+	free(newNode);
 	return (NULL);
 }
-

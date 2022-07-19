@@ -14,7 +14,7 @@ void free_listint(listint_t *head)
 	{
 		emty = head->next;
 		free(head);
-		head empty;
+		head = empty;
 	}
 
 

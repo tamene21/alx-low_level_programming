@@ -17,13 +17,13 @@ void print_binary(unsigned long int n)
 		if (num & 1)
 		{
 			_putchar('1');
-			num++;
+			count++;
 		}
-		else if (num)
+		else if (count)
 			_putchar('0');
 	}
 
-	if (!num)
+	if (!count)
 		_putchar('0');
 
 }
